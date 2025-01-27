@@ -55,8 +55,11 @@ const updateGoal = asyncHandler(async (req, res) => {
   const updatedGoal = await Goal.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
   })
+  const goals = await Goal.find({ user: req.user.id }) // return updated list of goals
 
-  res.status(200).json(updatedGoal)
+  //res.status(200).json(updatedGoal)
+
+  res.status(200).json(goals)
 })
 
 // @desc    Delete goal
