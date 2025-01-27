@@ -1,0 +1,5 @@
+for root folder:
+    npm i bcryptjs colors dotenv express express-async-handler jsonwebtoken mongoose
+for frontend:
+    npm update
+    npm i react-modal
